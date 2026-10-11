@@ -1,0 +1,18 @@
+# Unpublished data: NOT to be pushed until the paper is published
+data/*
+results/*
+!data/.gitkeep
+!data/README.md
+!results/.gitkeep
+# raw reads and QIIME 2 intermediates
+*.fastq
+*.fastq.gz
+*.qza
+*.qzv
+qiime2_work/
+manifest.tsv
+metadata_pigs.csv
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
