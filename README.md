@@ -1,8 +1,4 @@
 ---
-
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 # 16S rRNA analysis of diarrheic piglets 
