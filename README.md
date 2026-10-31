@@ -1,16 +1,6 @@
-<<<<<<< HEAD
----
----
-=======
-------------------------------------------------------------------------
-
-editor_options: markdown: wrap: 72 ---
->>>>>>> e50b2c1 (final commit)
-
 # 16S rRNA analysis of diarrheic piglets
 
-Code for the 16S rRNA (V3–V4) part of the manuscript *"Integrated culture, microbiome profiling, and whole-genome sequencing reveal multilevel bacterial heterogeneity in diarrheic piglets in Kazakhstan"* (34 samples; age groups 14, 24 and 30 days).
-
+Code for the 16S rRNA (V3–V4) part 
 ## Layout
 
 | Path | Purpose |
@@ -31,11 +21,10 @@ MANIFEST=/path/to/manifest.tsv CLASSIFIER=/path/silva-138.2-v3v4-classifier.qza 
 
 # 2. R (run from the repository root)
 Rscript scripts/install_R_packages.R
-PIGLET_VARIANT=noorg bash run_all.sh      # corrected analysis (organelles removed)
-PIGLET_VARIANT=all   bash run_all.sh      # first-submission table (organelles retained)
+PIGLET_VARIANT=all   bash run_all.sh      
 ```
 
-Step 01 writes `data/all/` (no organelle filter) and `data/noorg/` (chloroplast + mitochondria removed). Every R script reads `data/<variant>/` and writes to `results/<variant>/`.
+Step 01 writes `data/all/` (no organelle filter, check in your case). Every R script reads `data/<variant>/` and writes to `results/<variant>/`.
 
 ## DADA2 / QIIME 2 parameters
 
@@ -50,7 +39,6 @@ Step 01 writes `data/all/` (no organelle filter) and `data/noorg/` (chloroplast 
 | Organelles | `taxa filter-table --p-exclude mitochondria,chloroplast` |
 | Rarefaction | 4,871 reads/sample, 100 iterations (alpha diversity only) |
 
-Read retention (unfiltered run): mean 70.3% filtered, 43.7% merged, 29.4% non-chimeric; final depth 4,871–27,763 reads/sample.
 
 ## License
 
