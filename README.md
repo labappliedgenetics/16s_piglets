@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 ---
 ---
+=======
+------------------------------------------------------------------------
 
-# 16S rRNA analysis of diarrheic piglets 
+editor_options: markdown: wrap: 72 ---
+>>>>>>> e50b2c1 (final commit)
+
+# 16S rRNA analysis of diarrheic piglets
 
 Code for the 16S rRNA (V3–V4) part of the manuscript *"Integrated culture, microbiome profiling, and whole-genome sequencing reveal multilevel bacterial heterogeneity in diarrheic piglets in Kazakhstan"* (34 samples; age groups 14, 24 and 30 days).
 
 ## Layout
 
 | Path | Purpose |
-|------------------------------------|------------------------------------|
+|----|----|
 | `scripts/01_qiime2_dada2.sh` | QIIME 2 import → DADA2 → SILVA taxonomy → **chloroplast/mitochondria removal** → export of tables and level-6 counts |
 | `scripts/02_alpha_beta.R` | rarefied alpha diversity, Bray–Curtis / Jaccard / Aitchison, PCoA, NMDS, PERMANOVA, PERMDISP, genus barplot, top-50 heatmap |
 | `scripts/03_dmm.R` | Dirichlet-multinomial mixture models on genus-resolved taxa (top-15/20/30), ARI sensitivity, DMM vs age (Fisher) |
@@ -34,7 +40,7 @@ Step 01 writes `data/all/` (no organelle filter) and `data/noorg/` (chloroplast 
 ## DADA2 / QIIME 2 parameters
 
 | Step | Setting |
-|------------------------------------|------------------------------------|
+|----|----|
 | Import | `PairedEndFastqManifestPhred33V2` |
 | Primer removal | inside DADA2: `--p-trim-left-f 17 --p-trim-left-r 21` (no cutadapt) |
 | Truncation | `--p-trunc-len-f 280 --p-trunc-len-r 220`, `--p-trunc-q 2` |
